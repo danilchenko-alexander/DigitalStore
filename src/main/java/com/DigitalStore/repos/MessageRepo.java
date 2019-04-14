@@ -1,7 +1,8 @@
 package com.DigitalStore.repos;
 
-import com.DigitalStore.domain.Users;
+import com.DigitalStore.domain.Message;
 import org.springframework.data.repository.CrudRepository;
 
-public interface MessageRepo extends CrudRepository<Users, Long> {
+public interface MessageRepo extends CrudRepository<Message, Long> {
+
 }

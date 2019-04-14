@@ -13,21 +13,17 @@
     </div>
     <div>
         <form method="post">
-            <input type="text" name="username" placeholder="name">
-            <input type="text" name="password" placeholder="password">
-            <input type="text" name="role" placeholder="role">
+            <input type="text" name="msg" placeholder="message">
             <input type="hidden" name="_csrf" value="{{_csrf.token}}">
             <button type="submit">Добавить</button>
         </form>
     </div>
     <div>Список имен</div>
-    {{#messagess}}
+    {{#messages}}
     <div>
         <b>{{id}}</b>
-        <span>{{username}}</span>
-        <span>{{password}}</span>
-        <i>{{role}}</i>
+        <span>{{msg}}</span>
     </div>
-    {{/messagess}}
+    {{/messages}}
 </body>
 </html>
