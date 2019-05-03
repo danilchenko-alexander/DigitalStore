@@ -1,8 +1,8 @@
 package com.DigitalStore.repos;
 
-import com.DigitalStore.domain.Users;
+import com.DigitalStore.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepo extends JpaRepository<Users,Long> {
-    Users findByUsername(String username);
+public interface UserRepo extends JpaRepository<User,Long> {
+    User findByUsername(String username);
 }

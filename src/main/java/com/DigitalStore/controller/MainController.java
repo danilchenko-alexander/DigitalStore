@@ -1,7 +1,7 @@
 package com.DigitalStore.controller;
 
 import com.DigitalStore.domain.Message;
-import com.DigitalStore.domain.Users;
+import com.DigitalStore.domain.User;
 import com.DigitalStore.repos.MessageRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -42,7 +42,7 @@ public class MainController {
 
     @PostMapping("/MainPage")
     public String add(
-            @AuthenticationPrincipal Users user,
+            @AuthenticationPrincipal User user,
             @RequestParam String msg, Map<String, Object> model){
         Message message = new Message(msg, user);
         messageRepo.save(message);

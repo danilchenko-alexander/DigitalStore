@@ -2,7 +2,7 @@ package com.DigitalStore.controller;
 
 
 import com.DigitalStore.domain.Role;
-import com.DigitalStore.domain.Users;
+import com.DigitalStore.domain.User;
 import com.DigitalStore.repos.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,8 +23,8 @@ public class RegistrationController {
     }
 
     @PostMapping("/registration")
-    public String addUser(Users users, Map<String ,Object> model) {
-        Users userFromDb = userRepo.findByUsername(users.getUsername());
+    public String addUser(User users, Map<String ,Object> model) {
+        User userFromDb = userRepo.findByUsername(users.getUsername());
 
         if(userFromDb != null){
             model.put("message", "User exists");
@@ -35,6 +35,6 @@ public class RegistrationController {
         users.setRoles(Collections.singleton(Role.USER));
         userRepo.save(users);
 
-        return "redirect:/login";
+        return "redirect:/MainPage";
     }
 }

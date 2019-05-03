@@ -12,12 +12,12 @@ public class Message {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
-    private Users author;
+    private User author;
 
     public Message() {
     }
 
-    public Message(String msg, Users user)
+    public Message(String msg, User user)
     {
         this.msg = msg;
         this.author = user;
@@ -43,11 +43,11 @@ public class Message {
         this.msg = msg;
     }
 
-    public Users getAuthor() {
+    public User getAuthor() {
         return author;
     }
 
-    public void setAuthor(Users author) {
+    public void setAuthor(User author) {
         this.author = author;
     }
 }
