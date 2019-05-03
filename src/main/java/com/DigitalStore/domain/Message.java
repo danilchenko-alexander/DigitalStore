@@ -1,31 +1,37 @@
 package com.DigitalStore.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Message {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private Integer id;
-
+    private Long id;
     private String msg;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id")
+    private Users author;
 
     public Message() {
     }
 
-    public Message(String msg) {
+    public Message(String msg, Users user)
+    {
         this.msg = msg;
+        this.author = user;
     }
 
-    public Integer getId() {
+    public String getAuthorName(){
+        return author != null ? author.getUsername() : "UNKNOWNUSER";
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -35,5 +41,13 @@ public class Message {
 
     public void setMsg(String msg) {
         this.msg = msg;
+    }
+
+    public Users getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Users author) {
+        this.author = author;
     }
 }
