@@ -3625,7 +3625,7 @@ tbody.collapse.in {
   overflow: hidden;
   background-color: #e5e5e5;
 }
-.dropdown-menu > li > a {
+.dropdown-menu > li > a, form > a {
   display: block;
   padding: 3px 20px;
   clear: both;

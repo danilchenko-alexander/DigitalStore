@@ -10,15 +10,18 @@
             <input type="text" name="msg" placeholder="message">
             <input type="hidden" name="_csrf" value="${_csrf.token}">
             <button type="submit">Добавить</button>
-
         </form>
         <form method="get" action="/MainPage">
             <input type="number" name="filter" placeholder="enter id">
-            <button type="submit">Удалить</button>
+           <button type="submit">Удалить</button>
+        </form>
+        <form method="get" action="/MainPage/findMsg">
+            <input type="text" name="filter" placeholder="enter msg">
+            <button type="submit">Найти</button>
         </form>
     </div>
     <div>Список имен</div>
-    <#list messages as message>
+    <#list messages?if_exists as message>
     <div>
         <b>${message.id}</b>
         <span>${message.msg}</span>

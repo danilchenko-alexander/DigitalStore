@@ -40,6 +40,24 @@ public class MainController {
         return "MainPage";
     }
 
+    @GetMapping("/MainPage/findMsg")
+    public String delMs(@RequestParam(required = false) String filter, Model model){
+        Iterable<Message> messages;
+
+        if(!filter.isEmpty() && filter!=null){
+            messages = messageRepo.findByMsg(filter);
+        }
+        else {
+            messages = messageRepo.findAll();
+        }
+
+        model.addAttribute("messages", messages);
+        model.addAttribute("filter", filter);
+        return "MainPage";
+    }
+
+
+
     @PostMapping("/MainPage")
     public String add(
             @AuthenticationPrincipal User user,
@@ -50,6 +68,8 @@ public class MainController {
         model.put("messages", messages);
         return "MainPage";
     }
+
+
 
 
 
