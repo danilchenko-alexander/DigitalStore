@@ -11,6 +11,6 @@
 <#macro logout>
 <form action="/logout" method="post">
     <input type="hidden" name="_csrf" value="${_csrf.token}">
-    <a href="#" onclick="this.parentNode.submit();">Выход</a>
+    <a class="dropdown-item" href="#" onclick="this.parentNode.submit();">Выход</a>
 </form>
 </#macro>

@@ -15,6 +15,8 @@ public class Product {
     private Double price;
     private String description;
 
+    private String filename;
+
 
     @ElementCollection(targetClass = Catalog.class, fetch = FetchType.EAGER)
     @CollectionTable(name = "product_type", joinColumns = @JoinColumn(name = "product_id"))
@@ -68,5 +70,13 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getFilename() {
+        return filename;
+    }
+
+    public void setFilename(String filename) {
+        this.filename = filename;
     }
 }

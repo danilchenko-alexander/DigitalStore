@@ -22,7 +22,7 @@ public class MainController {
     public String greeting(
             Map<String, Object> model
     ) {
-        return "greeting";
+        return "MainPage";
     }
 
     @GetMapping("/MainPage")
