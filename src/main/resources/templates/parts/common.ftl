@@ -14,7 +14,7 @@
     <#import "login.ftl" as l>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/MainPage">DigitalStore</a>
+    <a class="navbar-brand" href="/">DigitalStore</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -41,8 +41,9 @@
                     ${name}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/user">Список пользователей</a>
-                            <a class="dropdown-item" href="/product">Список продуктов</a>
+                        <a class="dropdown-item" href="/user">Редактировать пользователей</a>
+                            <a class="dropdown-item" href="/product">Редактировать список продуктов</a>
+                            <a class="dropdown-item" href="/catalogList">Редактировать каталог</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#"><@l.logout /></a>
                     </div>

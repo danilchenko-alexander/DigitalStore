@@ -2,6 +2,7 @@ package com.DigitalStore.controller;
 
 import com.DigitalStore.domain.Catalog;
 import com.DigitalStore.domain.Product;
+import com.DigitalStore.domain.Subcatalog;
 import com.DigitalStore.repos.ProductRepo;
 import com.DigitalStore.repos.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ import java.util.Map;
 import java.util.UUID;
 
 @Controller
-@RequestMapping("/product")
+@RequestMapping("/catalogList/{catalogName}")
 @PreAuthorize("hasAnyAuthority('ADMIN')")
 public class ProductController {
     @Autowired
@@ -27,10 +28,11 @@ public class ProductController {
     @Value("${upload.path}")
     private String uploadPath;
 
-    @GetMapping
-    public String main(Model model){
+    @GetMapping("edit/{subcatalogId}")
+    public String main(@PathVariable Subcatalog subcatalogId, Model model){
         Iterable<Product> products;
-        products = productRepo.findAll();
+        products = productRepo.findBySubcatalogId(subcatalogId.getId());
+        model.addAttribute("subcatalog", subcatalogId);
         model.addAttribute("products",products);
         return "productList";
     }
@@ -43,15 +45,16 @@ public class ProductController {
         return "productEdit";
     }
 
-    @PostMapping
-    public String addProduct(@RequestParam String name,
+    @PostMapping("edit/{subcatalog}")
+    public String addProduct(@PathVariable("subcatalog") Subcatalog subcatalog,
+                             @RequestParam String name,
                              @RequestParam String price,
                              @RequestParam String description,
                              Map<String, Object> model,
                              @RequestParam("file") MultipartFile file) throws IOException {
 
         Product product = new Product(name, Double.parseDouble(price), description);
-
+        product.setSubcatalog(subcatalog);
         if(file != null && !file.getOriginalFilename().isEmpty()){
             File uploadDir = new File(uploadPath);
 
@@ -66,11 +69,10 @@ public class ProductController {
             product.setFilename(resultFilename);
         }
 
-
         productRepo.save(product);
         Iterable<Product> products = productRepo.findAll();
         model.put("products", products);
-        return "productList";
+        return "redirect:/catalogList/{catalogName}/edit/"+subcatalog.getId().toString();
     }
 
 

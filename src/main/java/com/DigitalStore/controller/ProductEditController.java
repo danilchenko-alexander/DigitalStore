@@ -41,7 +41,7 @@ public class ProductEditController {
         product.setName(name);
         product.setPrice(Double.parseDouble(price));
         product.setDescription(description);
-        Set<String> catalogs = Arrays.stream(Catalog.values())
+        /*Set<String> catalogs = Arrays.stream(Catalog.values())
                 .map(Catalog::name)
                 .collect(Collectors.toSet());
 
@@ -51,7 +51,7 @@ public class ProductEditController {
             if(catalogs.contains(key)){
                 product.getCatalogs().add(Catalog.valueOf(key));
             }
-        }
+        }*/
 
         productRepo.save(product);
         return "redirect:/product";
@@ -60,7 +60,6 @@ public class ProductEditController {
 
     @GetMapping("/delete")
     public String deleteProduct(@RequestParam("productId") Product product, Model model){
-        System.out.println("zdarova");
         if(product.getFilename()!=null) {
             File file = new File(uploadPath + "/" + product.getFilename());
             file.delete();

@@ -14,14 +14,11 @@ public class Product {
     private String name;
     private Double price;
     private String description;
-
     private String filename;
 
-
-    @ElementCollection(targetClass = Catalog.class, fetch = FetchType.EAGER)
-    @CollectionTable(name = "product_type", joinColumns = @JoinColumn(name = "product_id"))
-    @Enumerated(EnumType.STRING)
-    private Set<Catalog> catalogs;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "category_id")
+    private Subcatalog subcatalog;
 
     public Product() {
     }
@@ -30,14 +27,6 @@ public class Product {
         this.name = name;
         this.price = price;
         this.description = description;
-    }
-
-    public Set<Catalog> getCatalogs() {
-        return catalogs;
-    }
-
-    public void setCatalogs(Set<Catalog> catalogs) {
-        this.catalogs = catalogs;
     }
 
     public String getName() {
@@ -78,5 +67,13 @@ public class Product {
 
     public void setFilename(String filename) {
         this.filename = filename;
+    }
+
+    public Subcatalog getSubcatalog() {
+        return subcatalog;
+    }
+
+    public void setSubcatalog(Subcatalog subcatalog) {
+        this.subcatalog = subcatalog;
     }
 }

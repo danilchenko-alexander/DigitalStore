@@ -11,20 +11,13 @@
                 <img src="../img/${product.filename}">
             </#if>
         </div>
-        <#list catalogs as catalog>
-            <div>
-                <label><input type="checkbox"
-                              name="${catalog}" ${product.catalogs?seq_contains(catalog)?string("checked", "")}>${catalog}
-                </label>
-            </div>
-        </#list>
         <input type="hidden" value="${product.id}" name="productId">
         <input type="hidden" value="${_csrf.token}" name="_csrf">
         <button type="submit">Save</button>
     </form>
 
     <form method="get" action="/productEdit/delete">
-        <input type="text" name="productId" value="${product.id}">
+        <input type="hidden" name="productId" value="${product.id}">
         <button type="submit">delete</button>
     </form>
 </div>

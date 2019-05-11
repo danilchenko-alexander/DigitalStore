@@ -1,33 +1,20 @@
 <#import "parts/common.ftl" as c>
 <#import "parts/login.ftl" as l>
 <@c.page>
-<div>
-    <@l.logout />
-</div>
-<div>
-    <form method="post">
-        <input type="text" name="msg" placeholder="message">
-        <input type="hidden" name="_csrf" value="${_csrf.token}">
-        <button type="submit">Добавить</button>
-    </form>
-    <form method="get" action="/MainPage">
-        <input type="number" name="filter" placeholder="enter id">
-        <button type="submit">Удалить</button>
-    </form>
-    <form method="get" action="/MainPage/findMsg">
-        <input type="text" name="filter" placeholder="enter msg">
-        <button type="submit">Найти</button>
-    </form>
-</div>
-<div>Список имен</div>
-    <#list messages?if_exists as message>
+<div>Список продуктов</div>
+    <#list products?if_exists as product>
     <div>
-        <b>${message.id}</b>
-        <span>${message.msg}</span>
-        <strong>${message.authorName}</strong>
+        <div>
+            <#if product.filename??>
+                <img src="../img/${product.filename}">
+            </#if>
+        </div>
+        <b>${product.name}</b><br>
+        <span>${product.price?replace(",",".")}</span><br>
+        <strong>${product.description}</strong><br>
     </div>
     <#else>
-    No messages
+    No productss
     </#list>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
