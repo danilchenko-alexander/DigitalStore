@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="faa6611b-6ef2-40e6-be46-e4ff420725d6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/a549ef02-503f-497f-8cb3-e44b4959c9a1.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/a549ef02-503f-497f-8cb3-e44b4959c9a1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/DigitalStore/controller/MainController.java" afterPath="$PROJECT_DIR$/src/main/java/com/DigitalStore/controller/MainController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/DigitalStore/controller/ProductController.java" afterPath="$PROJECT_DIR$/src/main/java/com/DigitalStore/controller/ProductController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/DigitalStore/controller/ProductEditController.java" afterPath="$PROJECT_DIR$/src/main/java/com/DigitalStore/controller/ProductEditController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/DigitalStore/domain/Catalog.java" afterPath="$PROJECT_DIR$/src/main/java/com/DigitalStore/domain/Catalog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/DigitalStore/domain/Product.java" afterPath="$PROJECT_DIR$/src/main/java/com/DigitalStore/domain/Product.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/DigitalStore/repos/ProductRepo.java" afterPath="$PROJECT_DIR$/src/main/java/com/DigitalStore/repos/ProductRepo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/MainPage.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/MainPage.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/productEdit.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/productEdit.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/productList.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/productList.ftl" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -1399,7 +1388,7 @@
       <updated>1554724483302</updated>
       <workItem from="1554724488930" duration="227250000" />
       <workItem from="1557320596137" duration="9361000" />
-      <workItem from="1557337169519" duration="97485000" />
+      <workItem from="1557337169519" duration="97659000" />
     </task>
     <task id="LOCAL-00001" summary="registration users">
       <created>1555270447520</created>
@@ -1450,11 +1439,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557345779462</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="editing sub catalogs">
+      <created>1557604684407</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1557604684407</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="334096000" />
+    <option name="totallyTimeSpent" value="334270000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1507,7 +1503,8 @@
     <MESSAGE value="admin role and user controller" />
     <MESSAGE value="added catalog system and ability to add/change product" />
     <MESSAGE value="uploading" />
-    <option name="LAST_COMMIT_MESSAGE" value="uploading" />
+    <MESSAGE value="editing sub catalogs" />
+    <option name="LAST_COMMIT_MESSAGE" value="editing sub catalogs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
