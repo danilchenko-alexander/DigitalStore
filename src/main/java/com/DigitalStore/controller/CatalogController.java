@@ -1,10 +1,8 @@
 package com.DigitalStore.controller;
 
 import com.DigitalStore.domain.Catalog;
-import com.DigitalStore.domain.Role;
 import com.DigitalStore.domain.Subcatalog;
 import com.DigitalStore.repos.SubcatalogRepo;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;

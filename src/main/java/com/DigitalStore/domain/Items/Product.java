@@ -1,24 +1,19 @@
-package com.DigitalStore.domain;
+package com.DigitalStore.domain.Items;
 
-import javax.persistence.*;
-import java.util.Set;
+import com.DigitalStore.domain.Subcatalog;
 
-@Entity
-@Table(name="products")
-public class Product {
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.MappedSuperclass;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long Id;
+@MappedSuperclass
+public abstract class Product {
 
     private String name;
     private Double price;
     private String description;
     private String filename;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "category_id")
-    private Subcatalog subcatalog;
 
     public Product() {
     }
@@ -29,20 +24,13 @@ public class Product {
         this.description = description;
     }
 
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Long getId() {
-        return Id;
-    }
-
-    public void setId(Long id) {
-        Id = id;
     }
 
     public Double getPrice() {
@@ -67,13 +55,5 @@ public class Product {
 
     public void setFilename(String filename) {
         this.filename = filename;
-    }
-
-    public Subcatalog getSubcatalog() {
-        return subcatalog;
-    }
-
-    public void setSubcatalog(Subcatalog subcatalog) {
-        this.subcatalog = subcatalog;
     }
 }

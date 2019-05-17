@@ -1,5 +1,5 @@
 package com.DigitalStore.domain;
 
 public enum Catalog {
-    COMPUTER, MOBILE,;
+    Computer, Monitor, Monoblock, Notebook, Phone, Printer  , TheTablet;
 }
