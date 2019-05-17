@@ -4,35 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/resources/templates/MainPage.ftl" line="99" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="faa6611b-6ef2-40e6-be46-e4ff420725d6" name="Default" comment="adding items complete">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/DigitalStore/repos/ProductRepo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/css/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/DigitalStore/domain/Product.java" afterPath="$PROJECT_DIR$/src/main/java/com/DigitalStore/domain/Items/Product.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/DigitalStore/config/MvcConfig.class" afterPath="$PROJECT_DIR$/target/classes/com/DigitalStore/config/MvcConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/DigitalStore/config/WebSecurityConfig.class" afterPath="$PROJECT_DIR$/target/classes/com/DigitalStore/config/WebSecurityConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/a549ef02-503f-497f-8cb3-e44b4959c9a1.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/a549ef02-503f-497f-8cb3-e44b4959c9a1.xml" />
+    <list default="true" id="faa6611b-6ef2-40e6-be46-e4ff420725d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/DigitalStore/config/MvcConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/DigitalStore/config/MvcConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/DigitalStore/config/WebSecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/DigitalStore/config/WebSecurityConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/DigitalStore/controller/CatalogController.java" afterPath="$PROJECT_DIR$/src/main/java/com/DigitalStore/controller/CatalogController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/DigitalStore/controller/MainController.java" afterPath="$PROJECT_DIR$/src/main/java/com/DigitalStore/controller/MainController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/DigitalStore/controller/ProductController.java" afterPath="$PROJECT_DIR$/src/main/java/com/DigitalStore/controller/ProductController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/DigitalStore/controller/ProductEditController.java" afterPath="$PROJECT_DIR$/src/main/java/com/DigitalStore/controller/ProductEditController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/DigitalStore/domain/Catalog.java" afterPath="$PROJECT_DIR$/src/main/java/com/DigitalStore/domain/Catalog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/MainPage.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/MainPage.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/productEdit.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/productEdit.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/productList.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/productList.ftl" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -1325,7 +1298,7 @@
       <updated>1554724483302</updated>
       <workItem from="1554724488930" duration="227250000" />
       <workItem from="1557320596137" duration="9361000" />
-      <workItem from="1557337169519" duration="239191000" />
+      <workItem from="1557337169519" duration="239405000" />
     </task>
     <task id="LOCAL-00001" summary="registration users">
       <created>1555270447520</created>
@@ -1397,11 +1370,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557604768896</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="adding items complete">
+      <created>1558054994166</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1558054994166</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="475802000" />
+    <option name="totallyTimeSpent" value="476016000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
