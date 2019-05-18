@@ -7,10 +7,13 @@ import com.DigitalStore.repos.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -174,8 +177,11 @@ public class MainController {
     */
 
     @GetMapping
-    public String main(Model model) {
+    public String main(Model model, HttpServletResponse response, @CookieValue(value="hits", defaultValue = "0") Long hits) {
 
+        hits++;
+        Cookie cookie = new Cookie("hits", hits.toString());
+        response.addCookie(cookie);
         Iterable<Computer> computers;
         computers = computerRepo.findAll();
         model.addAttribute("computers", computers);

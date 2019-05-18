@@ -14,7 +14,7 @@
 
 <main>
     <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5">
+            <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5">
             <span class="navbar-brand">Категории: </span>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#nextNav" aria-controls="nextNav" aria-expanded="false"
