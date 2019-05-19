@@ -31,7 +31,7 @@
                 <a class="nav-link mr-4" href="/contactUs"><i class="fa fa-envelope mr-2" aria-hidden="true"></i>Замечания и предложения</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link mr-4" href="/vacancy">Вакансии</a>
+                <a class="nav-link mr-4" href="/Contacts">Контакты</a>
             </li>
             <li class="nav-item dropdown mr-4">
                 <#if !known>
