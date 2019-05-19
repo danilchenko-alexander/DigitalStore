@@ -14,11 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/")
@@ -165,7 +162,7 @@ public class MainController {
 
 
         @PostMapping
-        public String add(
+        public String addMessage(
                 @AuthenticationPrincipal User user,
                 @RequestParam String msg, Map<String, Object> model){
             Message message = new Message(msg, user);

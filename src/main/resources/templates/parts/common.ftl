@@ -33,6 +33,9 @@
             <li class="nav-item">
                 <a class="nav-link mr-4" href="/Contacts">Контакты</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link mr-4" href="/Reviews">Отзывы</a>
+            </li>
             <li class="nav-item dropdown mr-4">
                 <#if !known>
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
