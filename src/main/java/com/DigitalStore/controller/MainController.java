@@ -89,7 +89,7 @@ public class MainController {
     }
 
     @GetMapping("products/{catalog}")
-    public String showProduct(@PathVariable("catalog") String catalogType, Model model){
+    public String showProductByCatalog(@PathVariable("catalog") String catalogType, Model model){
         switch (catalogType){
             case "Phone":{
                 model.addAttribute("phones" ,phoneRepo.findAll());
@@ -174,7 +174,7 @@ public class MainController {
     */
 
     @GetMapping
-    public String main(Model model, HttpServletResponse response, @CookieValue(value="hits", defaultValue = "0") Long hits) {
+    public String mainPage(Model model, HttpServletResponse response, @CookieValue(value="hits", defaultValue = "0") Long hits) {
 
         hits++;
         Cookie cookie = new Cookie("hits", hits.toString());

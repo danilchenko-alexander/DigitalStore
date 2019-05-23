@@ -48,7 +48,7 @@ public class ProductController {
 
 
     @GetMapping("edit/{subcatalogId}")
-    public String main(@PathVariable String catalogName, @PathVariable Subcatalog subcatalogId, Model model) {
+    public String showSubcatalogProducts(@PathVariable String catalogName, @PathVariable Subcatalog subcatalogId, Model model) {
 
         switch (catalogName) {
             case "Computer": {

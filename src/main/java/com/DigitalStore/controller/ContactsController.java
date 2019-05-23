@@ -22,7 +22,7 @@ public class ContactsController {
     private ContactsRepo contactsRepo;
 
     @GetMapping
-    public String showNewsPage(Model model){
+    public String showContactsPage(Model model){
         Iterable<Contacts> contacts = contactsRepo.findAll();
         Contacts con = contacts.iterator().next();
         Iterable<String> s = Arrays.asList(con.getPhoneNumbers().split("/"));

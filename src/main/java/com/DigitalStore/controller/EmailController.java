@@ -20,13 +20,13 @@ public class EmailController {
     private MailSender mailSender;
 
     @GetMapping
-    public String contactUs(){
+    public String showContactUsPage(){
 
         return "contactUs";
     }
 
     @GetMapping("/send")
-    public String sendqq(@RequestParam Map<String, String> form){
+    public String sendMessageToEmail(@RequestParam Map<String, String> form){
         String message = String.format("message from" +form.get("email")+ "\n" + form.get("message"));
         mailSender.send("gisujev@key-mail.net",form.get("subject"), message);
         return "contactUs";

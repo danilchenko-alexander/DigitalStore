@@ -18,7 +18,7 @@ public class RegistrationController {
     private UserRepo userRepo;
 
     @GetMapping("/registration")
-    public String registration() {
+    public String showRegistrationPage() {
         return "registration";
     }
 

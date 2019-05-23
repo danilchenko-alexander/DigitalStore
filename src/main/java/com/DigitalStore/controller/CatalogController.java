@@ -24,7 +24,7 @@ public class CatalogController {
     private SubcatalogRepo subcatalogRepo;
 
     @GetMapping
-    public String main(Model model) {
+    public String showCatalogs(Model model) {
         model.addAttribute("catalogs", Catalog.values());
         return "catalogList";
     }

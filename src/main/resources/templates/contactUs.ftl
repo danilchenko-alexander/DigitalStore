@@ -6,10 +6,10 @@
 <section class="mb-4">
 
     <!--Section heading-->
-    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Оставьте ваш отзыв</h2>
     <!--Section description-->
-    <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
-        a matter of hours to help you.</p>
+    <p class="text-center w-responsive mx-auto mb-5">Если у вас есть какие-либо замечания или предложения
+    заполните следующую форму</p>
 
     <div class="row justify-content-center">
 
@@ -22,7 +22,7 @@
                     <div class="col-md-6">
                         <div class="md-form mb-0">
                             <input type="text" id="name" name="name" class="form-control">
-                            <label for="name" class="">Your name</label>
+                            <label for="name" class="">Ваше имя</label>
                         </div>
                     </div>
                     <!--Grid column-->
@@ -30,7 +30,7 @@
                     <div class="col-md-6">
                         <div class="md-form mb-0">
                             <input type="text" id="email" name="email" class="form-control">
-                            <label for="email" class="">Your email</label>
+                            <label for="email" class="">Ваш email</label>
                         </div>
                     </div>
                     <!--Grid column-->
@@ -41,7 +41,7 @@
                     <div class="col-md-12">
                         <div class="md-form mb-0">
                             <input type="text" id="subject" name="subject" class="form-control">
-                            <label for="subject" class="">Subject</label>
+                            <label for="subject" class="">Тема письма</label>
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
 
                         <div class="md-form">
                             <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                            <label for="message">Your message</label>
+                            <label for="message">Ваше сообщение</label>
                         </div>
 
                     </div>
