@@ -7,10 +7,7 @@ import com.DigitalStore.repos.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.CookieValue;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
@@ -85,8 +82,27 @@ public class MainController {
 
         model.addAttribute("catalogs", getCatalogs());
         model.addAttribute("subb",getSubcatalogs());
+        model.addAttribute("subcatalog", subcatalog.getName());
         return "MainPage";
     }
+
+    @PostMapping("show/{catalog}/{prod}")
+    public String aboutProduct(@PathVariable("prod") Long id,
+                               @PathVariable("catalog") String catalog,
+                               Model model){
+        switch (catalog){
+            case "Computer":{
+                model.addAttribute("computer", computerRepo.findById(id).get());
+            }break;
+            case "Phone":{
+                model.addAttribute("phone", phoneRepo.findById(id));
+            }break;
+        }
+        model.addAttribute("catalogs", getCatalogs());
+        model.addAttribute("subb",getSubcatalogs());
+        return "aboutProduct";
+    }
+
 
     @GetMapping("products/{catalog}")
     public String showProductByCatalog(@PathVariable("catalog") String catalogType, Model model){
@@ -174,16 +190,14 @@ public class MainController {
     */
 
     @GetMapping
-    public String mainPage(Model model, HttpServletResponse response, @CookieValue(value="hits", defaultValue = "0") Long hits) {
-
-        hits++;
-        Cookie cookie = new Cookie("hits", hits.toString());
-        response.addCookie(cookie);
+    public String mainPage(Model model) {
         Iterable<Computer> computers;
         computers = computerRepo.findAll();
         model.addAttribute("computers", computers);
         model.addAttribute("catalogs", getCatalogs());
         model.addAttribute("subb",getSubcatalogs());
+        model.addAttribute("currentCatalog", "Computer");
+        model.addAttribute("mp", "mp");
 
         return "MainPage";
     }

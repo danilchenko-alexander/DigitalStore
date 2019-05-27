@@ -1,9 +1,9 @@
 <#import "parts/common.ftl" as c>
 <@c.page>
-<div>
+<div class="text-center">
     <#list catalogs as catalog>
         <div>
-            <a href="/catalogList/${catalog}">${catalog}</a>
+            <a class="btn btn-primary" style="width: 30%;" href="/catalogList/${catalog}">${catalog}</a>
         </div>
     </#list>
 </div>

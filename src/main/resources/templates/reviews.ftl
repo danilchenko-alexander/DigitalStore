@@ -53,7 +53,7 @@
     <form method="post" id="review-form" name="review-form">
         <div class="md-form">
             <textarea type="text" id="message" name="msg" rows="2" class="form-control md-textarea"></textarea>
-            <label for="message">Ваш отзыв ёп=)</label>
+            <label for="message">Текст</label>
         </div>
         <input type="hidden" name="_csrf" value="${_csrf.token}">
     </form>
