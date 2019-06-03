@@ -30,26 +30,33 @@ public class CatalogController {
     }
 
     @GetMapping("{catalogs}")
-    public String editCatalog(@PathVariable("catalogs") String catalogName, Model model){
-        model.addAttribute("subcatalogs",subcatalogRepo.findByCatalogs(Catalog.valueOf(catalogName)));
-        model.addAttribute("catalogName",catalogName);
+    public String editCatalog(@PathVariable("catalogs") String catalogName, Model model) {
+        model.addAttribute("subcatalogs", subcatalogRepo.findByCatalogs(Catalog.valueOf(catalogName)));
+        model.addAttribute("catalogName", catalogName);
         return "catalogEdit";
     }
 
     @PostMapping("/addSubcatalog")
     public String addSubcatalogToCatalog(Subcatalog subcatalogs,
                                          @RequestParam String catalogName,
-                                         @RequestParam Map<String, String> form){
+                                         @RequestParam Map<String, String> form,
+                                         Model model) {
+        if (subcatalogRepo.findByName(subcatalogs.getName()).iterator().hasNext()) {
+            subcatalogs.setCatalogs(Collections.singleton(Catalog.valueOf(catalogName)));
+            model.addAttribute("message", "subcatalog exists");
+            model.addAttribute("subcatalogs", subcatalogRepo.findByCatalogs(Catalog.valueOf(catalogName)));
+            model.addAttribute("catalogName", catalogName);
+            return "catalogEdit";
+        }
         Set<String> catalogs = Arrays.stream(Catalog.values())
                 .map(Catalog::name)
                 .collect(Collectors.toSet());
 
-        for(String key : form.keySet()){
-            if(catalogs.contains(key)){
+        for (String key : form.keySet()) {
+            if (catalogs.contains(key)) {
                 subcatalogs.getCatalogs().add(Catalog.valueOf(key));
             }
         }
-
         subcatalogs.setCatalogs(Collections.singleton(Catalog.valueOf(catalogName)));
         subcatalogRepo.save(subcatalogs);
         return "redirect:/catalogList";

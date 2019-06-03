@@ -17,16 +17,21 @@ public class RegistrationController {
     @Autowired
     private UserRepo userRepo;
 
+    @GetMapping("/login")
+    public String logoutMain(){
+        return "redirect:/";
+    }
+
     @GetMapping("/registration")
     public String showRegistrationPage() {
         return "registration";
     }
 
     @PostMapping("/registration")
-    public String addUser(User users, Map<String ,Object> model) {
+    public String addUser(User users, Map<String, Object> model) {
         User userFromDb = userRepo.findByUsername(users.getUsername());
 
-        if(userFromDb != null){
+        if (userFromDb != null) {
             model.put("message", "User exists");
             return "registration";
         }
@@ -35,6 +40,6 @@ public class RegistrationController {
         users.setRoles(Collections.singleton(Role.USER));
         userRepo.save(users);
 
-        return "redirect:/MainPage";
+        return "redirect:/";
     }
 }

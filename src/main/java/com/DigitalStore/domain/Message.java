@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class Message {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String msg;
 
@@ -17,13 +17,12 @@ public class Message {
     public Message() {
     }
 
-    public Message(String msg, User user)
-    {
+    public Message(String msg, User user) {
         this.msg = msg;
         this.author = user;
     }
 
-    public String getAuthorName(){
+    public String getAuthorName() {
         return author != null ? author.getUsername() : "UNKNOWNUSER";
     }
 

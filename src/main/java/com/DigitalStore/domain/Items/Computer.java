@@ -6,9 +6,8 @@ import com.DigitalStore.domain.Subcatalog;
 import javax.persistence.*;
 
 @Entity
-@Table(name="computer")
+@Table(name = "computer")
 public class Computer extends Product {
-
 
 
     @Id

@@ -7,4 +7,5 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface SubcatalogRepo extends CrudRepository<Subcatalog,Long> {
     Iterable<Subcatalog> findByCatalogs(Catalog catalog);
+    Iterable<Subcatalog> findByName(String name);
 }

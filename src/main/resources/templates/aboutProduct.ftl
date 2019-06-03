@@ -11,8 +11,14 @@
             <p class="mt-5">Наличие: Есть в наличии</p>
             <p>Описание: ${computer.description}</p>
             <h2 class="mt-5 mb-5">${computer.price} руб (с НДС)</h2>
-            <button class="btn btn-primary" style="width: 100%;">В корзину
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+            <button class="btn btn-primary" onclick="funnyfun()" style="width:100%;">В корзину
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <input type="hidden" value="Computer" id="productType">
+                <input type="hidden" value="${computer.name}" id="getFromCN">
+                <input type="hidden" value="${computer.id}" id="getFromID">
+                <input type="hidden" value="${computer.price}" id="getFromPR">
+                <#--<input type="text" value="" id="getfromlocal">-->
+            </button>
         </div>
     </div>
     <div class="row">

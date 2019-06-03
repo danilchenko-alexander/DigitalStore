@@ -68,26 +68,6 @@
                 <span aria-hidden="true">1</span>
             </a>
         </li>
-        <li class="page-item">
-            <a class="page-link" aria-label="Previous">
-                <span aria-hidden="true">2</span>
-            </a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" aria-label="Previous">
-                <span aria-hidden="true">3</span>
-            </a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" aria-label="Previous">
-                <span aria-hidden="true">4</span>
-            </a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-            </a>
-        </li>
     </ul>
 </nav>
 </@mp.page2>
